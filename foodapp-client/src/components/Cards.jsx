@@ -70,6 +70,11 @@ const Cards = ({ item }) => {
         confirmButtonColor: "#39DB4A",
         cancelButtonColor: "#d33",
         confirmButtonText: "Login now!",
+        buttonsStyling: true,
+      customClass: {
+    confirmButton: 'btn bg-green text-white border-none mx-2', // Adding your own classes
+    cancelButton: 'btn bg-red text-white border-none mx-2'
+  }
       }).then((result) => {
         if (result.isConfirmed) {
           navigate("/login", { state: { from: location } });

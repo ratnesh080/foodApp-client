@@ -21,10 +21,12 @@ const requestLogger = require("./api/middleware/requestLogger");
 validateEnv();
 
 // middlewares
-app.use(helmet());
+app.use(helmet({
+    crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+  }));
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL, "http://localhost:5173"].filter(Boolean),
+    origin: [process.env.CLIENT_URL, "https://food-app-client-jr6v.vercel.app"].filter(Boolean),
     credentials: true,
   })
 );

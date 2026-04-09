@@ -123,7 +123,7 @@ const router = createBrowserRouter([
         element: withSuspense(<UpdateMenu />),
         loader: async ({ params }) => {
           const res = await fetch(
-            `${import.meta.env.VITE_API_BASE_URL || "http://localhost:6001"}/menu/${params.id}`
+            `${import.meta.env.VITE_API_BASE_URL || "https://foodapp-client-xy6z.onrender.com/"}/menu/${params.id}`
           );
           const json = await res.json();
           return json?.data || json;

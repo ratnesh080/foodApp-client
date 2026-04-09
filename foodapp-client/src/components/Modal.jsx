@@ -48,7 +48,7 @@ const Modal = () => {
           email: result?.user?.email,
         };
         // Ensure user is synced with backend
-        axios.post("http://localhost:6001/users", userInfo).then(() => {
+        axios.post("https://foodapp-client-xy6z.onrender.com/users", userInfo).then(() => {
           document.getElementById("my_modal_5").close();
           navigate("/");
         });

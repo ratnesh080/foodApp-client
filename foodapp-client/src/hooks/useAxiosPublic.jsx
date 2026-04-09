@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:6001",
+  baseURL: import.meta.env.VITE_API_BASE_URL || "https://foodapp-client-xy6z.onrender.com/",
 });
 
 const useAxiosPublic = () => {
